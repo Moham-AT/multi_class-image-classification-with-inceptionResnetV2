@@ -7,9 +7,9 @@ for a better calculation i used categorical_crossentropy loss and CategoricalAcc
 for the puprose of augmenting dataset, i used the parameters such as fliping, rotating, zooming etc, in ImageDataGenerator argument.
 
 from different pretrained models which are available in tf.keras.applications the inceptionResnetV2 had the best results for this problem.
-the important thing in this model is that the input images should have height and width of 299 pixels and if the training time is important for us it's better to freeze the weights of model and then train on our dataset.
+the important thing in this model is that the input images should have height and width of 299 pixels and if the training time is important for us it's better to freeze the weights of model and then train it on our dataset.
 
-i added four dense layers at the end of the inceptionResnetV2 model. this last layers have 2048, 1024, 512 and 10 layers respectively. this are for specifiying the model to our problem. this 4 layers will be trained during training process.
+i added four dense layers at the end of the inceptionResnetV2 model. this last layers have 2048, 1024, 512 and 10 unints respectively. this are for specifiying the model to our problem. this 4 layers will be trained during training process.
 
 finally for the test set we had a seprate folder with 10000 uncategorized images. 
 in the last blocks of code i tried to save the trained model and use it for predictiong the class of test images. there maybe a error of RAM overloading when you have 10000 images.
